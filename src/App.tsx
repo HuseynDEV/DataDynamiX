@@ -1,6 +1,7 @@
 import { QueryClient, QueryClientProvider } from "react-query"
 import AddUser from './components/AddUser'
 import UsersList from './components/UsersList'
+import { useFetchAndUpdateUsers } from "./hook/fetchAndUpdateUsers"
 const queryClient = new QueryClient()
 const App: React.FC = () => {
   return (
@@ -11,6 +12,7 @@ const App: React.FC = () => {
 }
 
 const AppContent: React.FC = () => {
+  useFetchAndUpdateUsers()
   return (
     <div className='container'>
       <div className='row' style={{ paddingTop: 50 }}>

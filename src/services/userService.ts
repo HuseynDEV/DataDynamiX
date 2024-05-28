@@ -24,7 +24,7 @@ export const updateUser = async (id: string, update: Partial<Omit<User, 'id'>>):
     await updateDoc(userDoc, update)
 }
 
-export const deleteUser = async(id: string): Promise<void> => {
+export const deleteUser = async (id: string): Promise<void> => {
     const userDoc = doc(db, 'users', id);
     await deleteDoc(userDoc)
 }

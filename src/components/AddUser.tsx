@@ -1,7 +1,7 @@
 import { useMutation } from "react-query"
 import { createUser } from "../services/userService"
 import { useUserStore } from "../store/useUserStore"
-import { FormEvent, ReactNode, useState } from "react"
+import { FormEvent, useState } from "react"
 
 const AddUser = () => {
 
@@ -106,7 +106,7 @@ const AddUser = () => {
                 >Add New User</button>
 
 
-{isError(error) && <p>Error adding user: {error.message}</p>}
+                {isError(error) && <p>Error adding user: {error.message}</p>}
             </form>
 
 
